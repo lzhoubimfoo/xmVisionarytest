@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "meta": {
+    "app": "VisionaryEditor",
+    "savedAt": "2025-12-09T04:31:37.765Z"
+  },
+  "camera": {
+    "position": {
+      "x": -1.0240571314648323,
+      "y": 0.3958431756463002,
+      "z": 0.16674815408035645
+    },
+    "rotation": {
+      "x": -1.1721079272698052,
+      "y": -1.1736441726531799,
+      "z": -1.1422997101677819
+    },
+    "scale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "fov": 60,
+    "near": 0.1,
+    "far": 1000
+  },
+  "totalFrames": 300,
+  "scenes": [
+    {
+      "view": "left",
+      "models": [
+        {
+          "id": "476110bd-1024-425d-a95d-fe14b7e1d595",
+          "name": "jumpingjacks.onnx",
+          "typeTag": "url",
+          "trs": [
+            [
+              1.5578764453490639,
+              -0.5285029491296741,
+              1.2963916568220026
+            ],
+            [
+              1.525075974697649,
+              0.04469951395343946,
+              1.7760709720183072
+            ],
+            [
+              0.5000000000000001,
+              0.5000000000000001,
+              0.5000000000000001
+            ]
+          ],
+          "type": "visionary",
+          "assetName": "/examples-api/models/examples/scene_06/jumpingjacks.onnx",
+          "gaussianParams": {
+            "id": "model_0",
+            "name": "jumpingjacks.onnx",
+            "visible": true,
+            "gaussianScale": 1,
+            "maxShDeg": 3,
+            "kernelSize": 0.1,
+            "opacityScale": 1,
+            "cutoffScale": 1,
+            "timeScale": 1,
+            "timeOffset": 0,
+            "timeUpdateMode": "fixed_delta",
+            "animationSpeed": 1,
+            "isAnimationRunning": true,
+            "isAnimationPaused": false
+          }
+        },
+        {
+          "id": "056027f4-2ca0-492c-80a8-cb987f1bcd74",
+          "name": "gaussians3d_house.onnx",
+          "typeTag": "url",
+          "trs": [
+            [
+              -3.094752543970075,
+              0.0970287222648597,
+              1.1258246842099073
+            ],
+            [
+              -0.2639622471227493,
+              0.03443810167323566,
+              -0.0965244018265426
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "type": "visionary",
+          "assetName": "/examples-api/models/examples/scene_06/gaussians3d_house.onnx",
+          "gaussianParams": {
+            "id": "model_1",
+            "name": "gaussians3d_house.onnx",
+            "visible": true,
+            "gaussianScale": 1,
+            "maxShDeg": 3,
+            "kernelSize": 0.1,
+            "opacityScale": 1,
+            "cutoffScale": 1,
+            "timeScale": 1,
+            "timeOffset": 0,
+            "timeUpdateMode": "fixed_delta",
+            "animationSpeed": 1,
+            "isAnimationRunning": true,
+            "isAnimationPaused": false
+          }
+        },
+        {
+          "id": "e730de09-3a8d-4d7c-8052-2c35b078df11",
+          "name": "录制相机_1",
+          "typeTag": "recordingCamera",
+          "trs": [
+            [
+              -0.09451867086358612,
+              0.17634468432800596,
+              1.1358033759516886
+            ],
+            [
+              -1.9199243070842067,
+              -1.400987374158328,
+              -1.9246070119027874
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "type": "recordingCamera",
+          "params": {
+            "camera": {
+              "fov": 60,
+              "near": 0.1,
+              "far": 1000,
+              "aspect": 1.7777777777777777
+            },
+            "viewport": {
+              "width": 400,
+              "height": 224
+            },
+            "preview": {
+              "visible": true
+            },
+            "gizmo": {
+              "length": 5
+            }
+          },
+          "cameraParams": {
+            "fov": 60,
+            "near": 0.1,
+            "far": 1000,
+            "aspect": 1.7777777777777777
+          }
+        }
+      ],
+      "keyframes": [
+        {
+          "objectId": "476110bd-1024-425d-a95d-fe14b7e1d595",
+          "frame": 141,
+          "trs": [
+            [
+              1.5578764453490639,
+              -0.5285029491296741,
+              1.2963916568220026
+            ],
+            [
+              1.525075974697649,
+              0.04469951395343946,
+              1.7760709720183072
+            ],
+            [
+              0.5000000000000001,
+              0.5000000000000001,
+              0.5000000000000001
+            ]
+          ]
+        },
+        {
+          "objectId": "476110bd-1024-425d-a95d-fe14b7e1d595",
+          "frame": 291,
+          "trs": [
+            [
+              1.5578764453490639,
+              -0.5285029491296741,
+              1.2963916568220026
+            ],
+            [
+              1.525075974697649,
+              0.04469951395343946,
+              1.7760709720183072
+            ],
+            [
+              0.5000000000000001,
+              0.5000000000000001,
+              0.5000000000000001
+            ]
+          ]
+        },
+        {
+          "objectId": "056027f4-2ca0-492c-80a8-cb987f1bcd74",
+          "frame": 141,
+          "trs": [
+            [
+              -3.094752543970075,
+              0.0970287222648597,
+              1.1258246842099073
+            ],
+            [
+              -0.2639622471227493,
+              0.03443810167323566,
+              -0.0965244018265426
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "objectId": "056027f4-2ca0-492c-80a8-cb987f1bcd74",
+          "frame": 291,
+          "trs": [
+            [
+              -3.094752543970075,
+              0.0970287222648597,
+              1.1258246842099073
+            ],
+            [
+              -0.2639622471227493,
+              0.03443810167323566,
+              -0.0965244018265426
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "objectId": "e730de09-3a8d-4d7c-8052-2c35b078df11",
+          "frame": 141,
+          "trs": [
+            [
+              -1.094518670863586,
+              0.17634468432800596,
+              -0.06419662404831152
+            ],
+            [
+              -1.9199243070842067,
+              -1.400987374158328,
+              -1.9246070119027874
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "cameraParams": {
+            "fov": 60,
+            "near": 0.1,
+            "far": 1000,
+            "aspect": 1.7777777777777777
+          }
+        }
+      ]
+    }
+  ]
+}

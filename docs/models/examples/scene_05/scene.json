@@ -1,0 +1,886 @@
+{
+  "version": 1,
+  "meta": {
+    "app": "VisionaryEditor",
+    "savedAt": "2025-12-08T10:04:54.543Z"
+  },
+  "camera": {
+    "position": {
+      "x": 1.2972598739303778,
+      "y": 0.1360467976719073,
+      "z": 1.8808097761146845
+    },
+    "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "scale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "fov": 60,
+    "near": 0.1,
+    "far": 1000
+  },
+  "totalFrames": 200,
+  "scenes": [
+    {
+      "view": "left",
+      "models": [
+        {
+          "id": "c246094c-64f4-478a-955c-778d2a1ff492",
+          "name": "ceramic.ply",
+          "typeTag": "url",
+          "trs": [
+            [
+              0.1885117338949509,
+              0.036179296011682724,
+              -0.14605451609252373
+            ],
+            [
+              0.04018168104979181,
+              0.016346058179229992,
+              0.08515591643846952
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "type": "visionary",
+          "assetName": "/examples-api/models/examples/scene_05/ceramic.ply",
+          "gaussianParams": {
+            "id": "model_0",
+            "name": "ceramic.ply",
+            "visible": true,
+            "gaussianScale": 1,
+            "maxShDeg": 0,
+            "kernelSize": 0.1,
+            "opacityScale": 1,
+            "cutoffScale": 1,
+            "timeScale": 1,
+            "timeOffset": 0,
+            "timeUpdateMode": "fixed_delta",
+            "animationSpeed": 1,
+            "isAnimationRunning": false,
+            "isAnimationPaused": false
+          }
+        },
+        {
+          "id": "8bc2dc85-6c5d-40c5-a242-b731e0db8204",
+          "name": "gaussianA.onnx",
+          "typeTag": "url",
+          "trs": [
+            [
+              0.9086325460164674,
+              -0.1155650652408878,
+              1.154433675373661
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0.5,
+              0.5,
+              0.4
+            ]
+          ],
+          "type": "visionary",
+          "assetName": "/examples-api/models/examples/scene_05/gaussianA.onnx",
+          "gaussianParams": {
+            "id": "model_1",
+            "name": "gaussianA.onnx",
+            "visible": true,
+            "gaussianScale": 1,
+            "maxShDeg": 3,
+            "kernelSize": 0.1,
+            "opacityScale": 1,
+            "cutoffScale": 1,
+            "timeScale": 0.05,
+            "timeOffset": 0,
+            "timeUpdateMode": "fixed_delta",
+            "animationSpeed": 1,
+            "isAnimationRunning": true,
+            "isAnimationPaused": false
+          }
+        },
+        {
+          "id": "b6df8cbd-fe1d-4cc5-b6cd-5be3344b4ebc",
+          "name": "gaussianB.onnx",
+          "typeTag": "url",
+          "trs": [
+            [
+              0.28596196188396567,
+              -0.07458601364151725,
+              0.7006064269711603
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ],
+          "type": "visionary",
+          "assetName": "/examples-api/models/examples/scene_05/gaussianB.onnx",
+          "gaussianParams": {
+            "id": "model_2",
+            "name": "gaussianB.onnx",
+            "visible": true,
+            "gaussianScale": 1,
+            "maxShDeg": 3,
+            "kernelSize": 0.1,
+            "opacityScale": 1,
+            "cutoffScale": 1,
+            "timeScale": 0.05,
+            "timeOffset": 0,
+            "timeUpdateMode": "fixed_delta",
+            "animationSpeed": 1,
+            "isAnimationRunning": true,
+            "isAnimationPaused": false
+          }
+        },
+        {
+          "id": "7e1e4e0a-cc20-443f-b066-f00de39558c0",
+          "name": "gaussianC.onnx",
+          "typeTag": "url",
+          "trs": [
+            [
+              1.137639267915432,
+              -0.07241994802184186,
+              0.03905901213691809
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ],
+          "type": "visionary",
+          "assetName": "/examples-api/models/examples/scene_05/gaussianC.onnx",
+          "gaussianParams": {
+            "id": "model_3",
+            "name": "gaussianC.onnx",
+            "visible": true,
+            "gaussianScale": 1,
+            "maxShDeg": 3,
+            "kernelSize": 0.1,
+            "opacityScale": 1,
+            "cutoffScale": 1,
+            "timeScale": 0.05,
+            "timeOffset": 0,
+            "timeUpdateMode": "fixed_delta",
+            "animationSpeed": 1,
+            "isAnimationRunning": true,
+            "isAnimationPaused": false
+          }
+        },
+        {
+          "id": "34dc2e10-f0f3-4d63-8d37-3ff42d2ca081",
+          "name": "gaussianD.onnx",
+          "typeTag": "url",
+          "trs": [
+            [
+              0.6562928013495295,
+              -0.04864321774642463,
+              -0.8704152704784865
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ],
+          "type": "visionary",
+          "assetName": "/examples-api/models/examples/scene_05/gaussianD.onnx",
+          "gaussianParams": {
+            "id": "model_4",
+            "name": "gaussianD.onnx",
+            "visible": true,
+            "gaussianScale": 1,
+            "maxShDeg": 3,
+            "kernelSize": 0.1,
+            "opacityScale": 1,
+            "cutoffScale": 1,
+            "timeScale": 0.05,
+            "timeOffset": 0,
+            "timeUpdateMode": "fixed_delta",
+            "animationSpeed": 1,
+            "isAnimationRunning": true,
+            "isAnimationPaused": false
+          }
+        },
+        {
+          "id": "75846b97-7bc0-4a53-b4ff-cd5ed0eadd65",
+          "name": "gaussianE.onnx",
+          "typeTag": "url",
+          "trs": [
+            [
+              1.5473506074728136,
+              -0.017392966072430738,
+              -1.0477336436126747
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ],
+          "type": "visionary",
+          "assetName": "/examples-api/models/examples/scene_05/gaussianE.onnx",
+          "gaussianParams": {
+            "id": "model_5",
+            "name": "gaussianE.onnx",
+            "visible": true,
+            "gaussianScale": 1,
+            "maxShDeg": 3,
+            "kernelSize": 0.1,
+            "opacityScale": 1,
+            "cutoffScale": 1,
+            "timeScale": 0.05,
+            "timeOffset": 0,
+            "timeUpdateMode": "fixed_delta",
+            "animationSpeed": 1,
+            "isAnimationRunning": true,
+            "isAnimationPaused": false
+          }
+        },
+        {
+          "id": "cd1c8ec5-4724-4673-8c74-36f0bd6c51dc",
+          "name": "gaussianF.onnx",
+          "typeTag": "url",
+          "trs": [
+            [
+              -0.5845755974133089,
+              -0.0918075468741767,
+              -0.3374514574183538
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ],
+          "type": "visionary",
+          "assetName": "/examples-api/models/examples/scene_05/gaussianF.onnx",
+          "gaussianParams": {
+            "id": "model_6",
+            "name": "gaussianF.onnx",
+            "visible": true,
+            "gaussianScale": 1,
+            "maxShDeg": 3,
+            "kernelSize": 0.1,
+            "opacityScale": 1,
+            "cutoffScale": 1,
+            "timeScale": 0.05,
+            "timeOffset": 0,
+            "timeUpdateMode": "fixed_delta",
+            "animationSpeed": 1,
+            "isAnimationRunning": true,
+            "isAnimationPaused": false
+          }
+        },
+        {
+          "id": "d5194ac0-13ff-4e59-a1a7-d0496a29dda5",
+          "name": "录制相机_1",
+          "typeTag": "recordingCamera",
+          "trs": [
+            [
+              1.1299702909923988,
+              0.07719325384087233,
+              1.6270445670232574
+            ],
+            [
+              -0.21418071185863927,
+              0.24345468968844894,
+              0.17690584786039582
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "type": "recordingCamera",
+          "params": {
+            "camera": {
+              "fov": 42,
+              "near": 0.1,
+              "far": 1000,
+              "aspect": 1.7777777777777777
+            },
+            "viewport": {
+              "width": 400,
+              "height": 224
+            },
+            "preview": {
+              "visible": true
+            },
+            "gizmo": {
+              "length": 5
+            }
+          },
+          "cameraParams": {
+            "fov": 42,
+            "near": 0.1,
+            "far": 1000,
+            "aspect": 1.7777777777777777
+          }
+        }
+      ],
+      "keyframes": [
+        {
+          "objectId": "c246094c-64f4-478a-955c-778d2a1ff492",
+          "frame": 100,
+          "trs": [
+            [
+              0.1885117338949509,
+              0.036179296011682724,
+              -0.14605451609252373
+            ],
+            [
+              0.04018168104979181,
+              0.016346058179229992,
+              0.08515591643846952
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "objectId": "c246094c-64f4-478a-955c-778d2a1ff492",
+          "frame": 162,
+          "trs": [
+            [
+              0.1885117338949509,
+              0.036179296011682724,
+              -0.14605451609252373
+            ],
+            [
+              0.04018168104979181,
+              0.016346058179229992,
+              0.08515591643846952
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "objectId": "c246094c-64f4-478a-955c-778d2a1ff492",
+          "frame": 199,
+          "trs": [
+            [
+              0.1885117338949509,
+              0.036179296011682724,
+              -0.14605451609252373
+            ],
+            [
+              0.04018168104979181,
+              0.016346058179229992,
+              0.08515591643846952
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "objectId": "8bc2dc85-6c5d-40c5-a242-b731e0db8204",
+          "frame": 100,
+          "trs": [
+            [
+              0.9086325460164674,
+              -0.1155650652408878,
+              1.154433675373661
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0.5,
+              0.5,
+              0.4
+            ]
+          ]
+        },
+        {
+          "objectId": "8bc2dc85-6c5d-40c5-a242-b731e0db8204",
+          "frame": 162,
+          "trs": [
+            [
+              0.9086325460164674,
+              -0.1155650652408878,
+              1.154433675373661
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0.5,
+              0.5,
+              0.4
+            ]
+          ]
+        },
+        {
+          "objectId": "8bc2dc85-6c5d-40c5-a242-b731e0db8204",
+          "frame": 199,
+          "trs": [
+            [
+              0.9086325460164674,
+              -0.1155650652408878,
+              1.154433675373661
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0.5,
+              0.5,
+              0.4
+            ]
+          ]
+        },
+        {
+          "objectId": "b6df8cbd-fe1d-4cc5-b6cd-5be3344b4ebc",
+          "frame": 100,
+          "trs": [
+            [
+              0.28596196188396567,
+              -0.07458601364151725,
+              0.7006064269711603
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ]
+        },
+        {
+          "objectId": "b6df8cbd-fe1d-4cc5-b6cd-5be3344b4ebc",
+          "frame": 162,
+          "trs": [
+            [
+              0.28596196188396567,
+              -0.07458601364151725,
+              0.7006064269711603
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ]
+        },
+        {
+          "objectId": "b6df8cbd-fe1d-4cc5-b6cd-5be3344b4ebc",
+          "frame": 199,
+          "trs": [
+            [
+              0.28596196188396567,
+              -0.07458601364151725,
+              0.7006064269711603
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ]
+        },
+        {
+          "objectId": "7e1e4e0a-cc20-443f-b066-f00de39558c0",
+          "frame": 100,
+          "trs": [
+            [
+              1.137639267915432,
+              -0.07241994802184186,
+              0.03905901213691809
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ]
+        },
+        {
+          "objectId": "7e1e4e0a-cc20-443f-b066-f00de39558c0",
+          "frame": 162,
+          "trs": [
+            [
+              1.137639267915432,
+              -0.07241994802184186,
+              0.03905901213691809
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ]
+        },
+        {
+          "objectId": "7e1e4e0a-cc20-443f-b066-f00de39558c0",
+          "frame": 199,
+          "trs": [
+            [
+              1.137639267915432,
+              -0.07241994802184186,
+              0.03905901213691809
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ]
+        },
+        {
+          "objectId": "34dc2e10-f0f3-4d63-8d37-3ff42d2ca081",
+          "frame": 100,
+          "trs": [
+            [
+              0.6562928013495295,
+              -0.04864321774642463,
+              -0.8704152704784865
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ]
+        },
+        {
+          "objectId": "34dc2e10-f0f3-4d63-8d37-3ff42d2ca081",
+          "frame": 162,
+          "trs": [
+            [
+              0.6562928013495295,
+              -0.04864321774642463,
+              -0.8704152704784865
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ]
+        },
+        {
+          "objectId": "34dc2e10-f0f3-4d63-8d37-3ff42d2ca081",
+          "frame": 199,
+          "trs": [
+            [
+              0.6562928013495295,
+              -0.04864321774642463,
+              -0.8704152704784865
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ]
+        },
+        {
+          "objectId": "75846b97-7bc0-4a53-b4ff-cd5ed0eadd65",
+          "frame": 100,
+          "trs": [
+            [
+              1.5473506074728136,
+              -0.017392966072430738,
+              -1.0477336436126747
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ]
+        },
+        {
+          "objectId": "75846b97-7bc0-4a53-b4ff-cd5ed0eadd65",
+          "frame": 162,
+          "trs": [
+            [
+              1.5473506074728136,
+              -0.017392966072430738,
+              -1.0477336436126747
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ]
+        },
+        {
+          "objectId": "75846b97-7bc0-4a53-b4ff-cd5ed0eadd65",
+          "frame": 199,
+          "trs": [
+            [
+              1.5473506074728136,
+              -0.017392966072430738,
+              -1.0477336436126747
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ]
+        },
+        {
+          "objectId": "cd1c8ec5-4724-4673-8c74-36f0bd6c51dc",
+          "frame": 100,
+          "trs": [
+            [
+              -0.5845755974133089,
+              -0.0918075468741767,
+              -0.3374514574183538
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ]
+        },
+        {
+          "objectId": "cd1c8ec5-4724-4673-8c74-36f0bd6c51dc",
+          "frame": 162,
+          "trs": [
+            [
+              -0.5845755974133089,
+              -0.0918075468741767,
+              -0.3374514574183538
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ]
+        },
+        {
+          "objectId": "cd1c8ec5-4724-4673-8c74-36f0bd6c51dc",
+          "frame": 199,
+          "trs": [
+            [
+              -0.5845755974133089,
+              -0.0918075468741767,
+              -0.3374514574183538
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0.5,
+              0.5,
+              0.5
+            ]
+          ]
+        },
+        {
+          "objectId": "d5194ac0-13ff-4e59-a1a7-d0496a29dda5",
+          "frame": 100,
+          "trs": [
+            [
+              0.9978881615023377,
+              0.07571027266734326,
+              1.730303975871914
+            ],
+            [
+              -0.21418071185863927,
+              0.24345468968844894,
+              0.17690584786039582
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "cameraParams": {
+            "fov": 42,
+            "near": 0.1,
+            "far": 1000,
+            "aspect": 1.7777777777777777
+          }
+        },
+        {
+          "objectId": "d5194ac0-13ff-4e59-a1a7-d0496a29dda5",
+          "frame": 162,
+          "trs": [
+            [
+              1.4533437804335825,
+              0.08082400085192626,
+              1.3742370488075804
+            ],
+            [
+              -0.21418071185863927,
+              0.24345468968844894,
+              0.17690584786039582
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "cameraParams": {
+            "fov": 42,
+            "near": 0.1,
+            "far": 1000,
+            "aspect": 1.7777777777777777
+          }
+        },
+        {
+          "objectId": "d5194ac0-13ff-4e59-a1a7-d0496a29dda5",
+          "frame": 199,
+          "trs": [
+            [
+              1.6454065369448516,
+              0.10375240703690075,
+              1.730303975871914
+            ],
+            [
+              -0.21418071185863927,
+              0.24345468968844894,
+              0.17690584786039582
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "cameraParams": {
+            "fov": 42,
+            "near": 0.1,
+            "far": 1000,
+            "aspect": 1.7777777777777777
+          }
+        }
+      ]
+    }
+  ]
+}

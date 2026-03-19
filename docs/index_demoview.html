@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size:16px;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visionary</title>
+    <link rel="icon" href="./assets/favicon_xia-CpFJ3J4K.ico" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="./libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <!-- 自定义主题样式 -->
+
+    <!-- 响应式布局样式 -->
+    <!-- 模态框样式 -->
+    <!-- 示例场景视频样式 -->
+    <link rel="stylesheet" href="./styles/demoview.css">
+    <!-- 图标字体 -->
+    <!-- <link rel="stylesheet" href="/fonts/icons.css"> -->
+  <script type="module" crossorigin src="./assets/demoview-D9MIQa1Q.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/iconfont-B4zLVXjH.js">
+  <link rel="modulepreload" crossorigin href="./assets/vendor-i18next-Lgj2Bm8L.js">
+  <link rel="modulepreload" crossorigin href="./assets/vendor-i18next-browser-languagedetector-OJKzRF51.js">
+  <link rel="modulepreload" crossorigin href="./assets/vendor--simonwep-pickr-B0ADQR8N.js">
+  <link rel="modulepreload" crossorigin href="./assets/vendor-jszip-C9JMEnB-.js">
+  <link rel="modulepreload" crossorigin href="./assets/three-ttWfAw2t.js">
+  <link rel="modulepreload" crossorigin href="./assets/vendor-onnxruntime-web-DFgSkXt1.js">
+  <link rel="modulepreload" crossorigin href="./assets/vendor-gl-matrix-Bfae2N03.js">
+  <link rel="modulepreload" crossorigin href="./assets/vendor-fflate-BJlM68iN.js">
+  <link rel="modulepreload" crossorigin href="./assets/vendor-mp4-muxer-DaZBAdSD.js">
+  <link rel="modulepreload" crossorigin href="./assets/visionary-core-Zt5YUc0X.js">
+  <link rel="modulepreload" crossorigin href="./assets/visionary-controllers-B-I824kN.js">
+  <link rel="modulepreload" crossorigin href="./assets/ui-controls-DkfzChPJ.js">
+  <link rel="stylesheet" crossorigin href="./assets/iconfont-BF-ImjTm.css">
+  <link rel="stylesheet" crossorigin href="./assets/ui-controls-CsRQPFoN.css">
+  <link rel="stylesheet" crossorigin href="./assets/vendor--simonwep-pickr-BWwpMGpr.css">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CPRQ43V3Q8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-CPRQ43V3Q8');
+</script>
+
+<body>
+    <div id="visionaryEditorContainer">
+        <div class="app-container-wrapper">
+            <div class="app-container" id="mainAppContainer">
+                <!-- 工具栏 -->
+                <div class="toolbar">
+                    <div class="toolbar-left">
+                        <div class="toolbar-brand">
+                            <a href="#" class="homepage-link-xiamen">
+                                <!-- <img src="src/assets/images/logo-new.svg" alt="Visionary Editor" class="toolbar-logo"> -->
+                                <img src="./assets/logo-xiamen-DXVwV-TI.png" alt="Visionary Editor" class="toolbar-logo">
+                            </a>
+                        </div>
+                        <div class="toolbar-nav" id="toolbar-nav-tools"></div>
+                    </div>
+                    <div class="toolbar-right">
+                        <!-- <div id="langController"></div> -->
+                        <div id="viewWindowController"></div>
+                        <div class="toolbar-nav" id="toolbar-right-nav-tools"></div>
+                    </div>
+                </div>
+
+
+                <!-- 主内容区域 -->
+                <div class="main-content">
+                    <!-- 左侧主容器 -->
+                    <div class="main-container">
+                        <div class="main-container-body" id="mainViewContainer"></div>
+                    </div>
+
+                    <!-- 右侧工具容器 -->
+                    <div class="tool-container active" id="rightPanelToolsBar">
+                        <div class="tool-container-body" id="rightPanelTools"></div>
+                    </div>
+                </div>
+
+
+                <div class="main-footer" id="mainFooterContainer">
+                    <div id="timelinePanelTools"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 主题切换器容器 -->
+        <div class="theme-switcher">
+            <div id="themeSelector" style="display: none;"></div>
+        </div>
+
+
+        <!-- 图片设置模态框 -->
+        <div class="vision-modal-overlay" id="imgSettingsModal">
+            <div class="vision-modal-dialog vision-img-modal-dialog">
+                <div class="vision-modal-content">
+                    <div class="vision-modal-header">
+                        <h5 class="vision-modal-title" data-i18n="modal.imageSettings.title">图像设置</h5>
+                    </div>
+                    <div class="vision-modal-body">
+                        <div class="vision-img-settings-content">
+                            <div class="vision-img-settings-item">
+                                <label class="vision-img-settings-label"
+                                    data-i18n="modal.imageSettings.resolution">分辨率</label>
+                                <div class="vision-img-resolution-inputs">
+                                    <div class="numeric-inputui-container panel-setting-item flex-direction-column">
+                                        <div class="numeric-input-controls">
+                                            <div class="numeric-input-container">
+                                                <input class="form-control" type="number" id="imgResolutionWidth"
+                                                    min="1" value="1920" placeholder="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="vision-img-resolution-separator">×</div>
+                                    <div class="numeric-inputui-container panel-setting-item flex-direction-column">
+                                        <div class="numeric-input-controls">
+                                            <div class="numeric-input-container">
+                                                <input class="form-control" type="number" id="imgResolutionHeight"
+                                                    min="1" value="1080" placeholder="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vision-img-settings-item" id="imgSettingsViewWindow">
+                                <label class="vision-img-settings-label"
+                                    data-i18n="modal.imageSettings.viewWindow">视窗设置</label>
+                                <div class="vision-img-resolution-inputs">
+                                    <div class="vision-img-view-option-item" data-value="left">
+                                        <div class="vision-img-view-option-radio">
+                                            <div class="vision-img-view-radio-circle"></div>
+                                        </div>
+                                        <span class="vision-img-view-option-label"
+                                            data-i18n="modal.imageSettings.left">左</span>
+                                    </div>
+                                    <div class="vision-img-view-option-item" data-value="right">
+                                        <div class="vision-img-view-option-radio">
+                                            <div class="vision-img-view-radio-circle"></div>
+                                        </div>
+                                        <span class="vision-img-view-option-label">右</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="vision-img-settings-item vision-switch-container panel-setting-item vision-switch-md vision-switch-primary vision-switch-label-left">
+                                <div class="vision-twoline-settings-label">
+                                    <div class="vision-twoline-settings-title"
+                                        data-i18n="modal.imageSettings.enableLineDrawing">
+                                        启用风格化</div>
+                                    <div class="vision-twoline-settings-subtitle"
+                                        data-i18n="modal.imageSettings.lineDrawing">线描</div>
+                                </div>
+
+                                <div class="vision-switch-wrapper panel-setting-item-content">
+                                    <input class="vision-switch-input" type="checkbox" id="image-linedrawing-control">
+                                    <div class="vision-switch">
+                                        <div class="vision-switch-slider">
+                                            <div class="vision-switch-thumb"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vision-modal-footer">
+                        <button type="button" class="vision-btn vision-btn-cancel" id="imgSettingsCancel"
+                            data-i18n="buttons.cancel">取消</button>
+                        <button type="button" class="vision-btn vision-btn-confirm tracking-button"
+                            data-event-category="click" data-event-label="exportImage" id="imgSettingsConfirm"
+                            data-i18n="buttons.confirm">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 视频设置模态框 -->
+        <div class="vision-modal-overlay" id="videoSettingsModal">
+            <div class="vision-modal-dialog vision-video-modal-dialog">
+                <div class="vision-modal-content vision-video-modal-content">
+                    <div class="vision-modal-header">
+                        <h5 class="vision-modal-title" data-i18n="modal.videoSettings.title">视频设置</h5>
+                    </div>
+                    <div class="vision-modal-body">
+                        <div class="vision-video-settings-content">
+                            <div class="vision-video-settings-item">
+                                <label class="vision-video-settings-label"
+                                    data-i18n="modal.videoSettings.resolution">分辨率</label>
+                                <div class="vision-video-select-wrapper">
+                                    <div class="vision-select-container">
+                                        <div class="dropdown w100">
+                                            <button
+                                                class="btn btn-secondary dropdown-toggle vision-dropdown-toggle w100"
+                                                type="button" id="videoResolutionButton" data-bs-toggle="dropdown"
+                                                aria-expanded="false">1920 x 1080
+                                            </button>
+                                            <ul class="dropdown-menu vision-dropdown-menu w100"
+                                                id="videoResolutionListDom" aria-labelledby="videoResolutionButton">
+                                                <li><a class="dropdown-item vision-dropdown-item" href="#"
+                                                        data-value="value960">960 x 540</a></li>
+                                                <li><a class="dropdown-item vision-dropdown-item" href="#"
+                                                        data-value="value1280">1280 x 720</a></li>
+                                                <li><a class="dropdown-item vision-dropdown-item active" href="#"
+                                                        data-value="value1920">1920 x 1080</a></li>
+                                                <li><a class="dropdown-item vision-dropdown-item" href="#"
+                                                        data-value="value2560">2560 x 1440</a></li>
+                                                <li><a class="dropdown-item vision-dropdown-item" href="#"
+                                                        data-value="value3840">3840 x 2160</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- <div class="vision-video-settings-item">
+                                <label class="vision-video-settings-label">帧率</label>
+                                <div class="vision-video-select-wrapper">
+                                    <div class="vision-select-container">
+                                        <div class="dropdown w100">
+                                            <button
+                                                class="btn btn-secondary dropdown-toggle vision-dropdown-toggle w100"
+                                                type="button" id="videoFramePSButton" data-bs-toggle="dropdown"
+                                                aria-expanded="false">30fps
+                                            </button>
+                                            <ul class="dropdown-menu vision-dropdown-menu w100" id="videoFramePSListDom"
+                                                aria-labelledby="videoFramePSButton">
+                                                <li><a class="dropdown-item vision-dropdown-item" href="#"
+                                                        data-value="v10">10fps</a></li>
+                                                <li><a class="dropdown-item vision-dropdown-item" href="#"
+                                                        data-value="v24">24fps</a></li>
+                                                <li><a class="dropdown-item vision-dropdown-item active" href="#"
+                                                        data-value="v30">30fps</a></li>
+                                                <li><a class="dropdown-item vision-dropdown-item" href="#"
+                                                        data-value="v60">60fps</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="vision-video-settings-item">
+                                <label class="vision-video-settings-label"
+                                    data-i18n="modal.videoSettings.bitrate">比特率</label>
+                                <div class="vision-video-select-wrapper">
+                                    <div class="vision-select-container">
+                                        <div class="dropdown w100">
+                                            <button
+                                                class="btn btn-secondary dropdown-toggle vision-dropdown-toggle w100"
+                                                type="button" id="videoBitrateButton" data-bs-toggle="dropdown"
+                                                aria-expanded="false" data-i18n="modal.videoSettings.high">高
+                                            </button>
+                                            <ul class="dropdown-menu vision-dropdown-menu w100" id="videoBitrateListDom"
+                                                aria-labelledby="videoBitrateButton">
+                                                <li><a class="dropdown-item vision-dropdown-item active" href="#"
+                                                        data-value="high" data-i18n="modal.videoSettings.high">高</a>
+                                                </li>
+                                                <li><a class="dropdown-item vision-dropdown-item" href="#"
+                                                        data-value="medium" data-i18n="modal.videoSettings.medium">中</a>
+                                                </li>
+                                                <li><a class="dropdown-item vision-dropdown-item" href="#"
+                                                        data-value="low" data-i18n="modal.videoSettings.low">低</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vision-img-settings-item" id="videoSettingsViewWindow">
+                                <label class="vision-img-settings-label"
+                                    data-i18n="modal.videoSettings.viewWindow">视窗设置</label>
+                                <div class="vision-img-resolution-inputs">
+                                    <div class="vision-img-view-option-item" data-value="left">
+                                        <div class="vision-img-view-option-radio">
+                                            <div class="vision-img-view-radio-circle"></div>
+                                        </div>
+                                        <span class="vision-img-view-option-label"
+                                            data-i18n="modal.videoSettings.left">左</span>
+                                    </div>
+                                    <div class="vision-img-view-option-item" data-value="right">
+                                        <div class="vision-img-view-option-radio">
+                                            <div class="vision-img-view-radio-circle"></div>
+                                        </div>
+                                        <span class="vision-img-view-option-label"
+                                            data-i18n="modal.videoSettings.right">右</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="vision-video-settings-item vision-switch-container panel-setting-item vision-switch-md vision-switch-primary vision-switch-label-left">
+                                <!-- <label class="vision-video-settings-label vision-switch-label panel-setting-item-label">enableLineDrawing</label> -->
+                                <div class="vision-twoline-settings-label">
+                                    <label class="vision-twoline-settings-title"
+                                        data-i18n="modal.videoSettings.enableLineDrawing">
+                                        启用风格化</label>
+                                    <label class="vision-twoline-settings-subtitle"
+                                        data-i18n="modal.videoSettings.lineDrawing">线描</label>
+                                </div>
+                                <div class="vision-switch-wrapper panel-setting-item-content">
+                                    <input class="vision-switch-input" type="checkbox" id="video-linedrawing-control">
+                                    <div class="vision-switch">
+                                        <div class="vision-switch-slider">
+                                            <div class="vision-switch-thumb"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vision-modal-footer">
+                        <button type="button" class="vision-btn vision-btn-cancel" id="videoSettingsCancel"
+                            data-i18n="buttons.cancel">取消</button>
+                        <button type="button" class="vision-btn vision-btn-confirm tracking-button"
+                            data-event-category="click" data-event-label="ExportVideo" id="videoSettingsConfirm"
+                            data-i18n="buttons.confirm">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 示例场景模态框 -->
+        <!-- <div class="vision-modal-overlay" id="demoViewModal"
+            onclick="if(event.target === this) this.classList.remove('vision-modal-show')"> -->
+        <div class="vision-modal-overlay" id="demoViewModal">
+            <div class="vision-modal-dialog vision-demoview-modal-dialog">
+                <div class="vision-modal-content vision-scene-modal-content">
+                    <div class="vision-modal-header vision-scene-modal-header">
+                        <h5 class="vision-modal-title vision-scene-modal-title" data-i18n="nav.selectExampleScene">示例场景
+                        </h5>
+                    </div>
+                    <div class="vision-modal-body vision-scene-modal-body">
+                        <!-- 选择示例场景区域 -->
+                        <div class="vision-scene-section">
+                            <div class="vision-scene-image-grid">
+                                <div class="vision-scene-image-item">
+                                    <!-- <img data-scene="example_scene_1"
+                                        src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&auto=format&fit=crop"
+                                        alt="场景1" /> -->
+                                    <video class="carousel-video" muted loop playsinline data-scene="example_scene_1">
+                                        <source src="../images/homepage/videos/v1.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="vision-scene-image-item">
+                                    <video class="carousel-video" muted loop playsinline data-scene="example_scene_2">
+                                        <source src="../images/homepage/videos/v2.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="vision-scene-image-item">
+                                    <video class="carousel-video" muted loop playsinline data-scene="example_scene_3">
+                                        <source src="../images/homepage/videos/v3.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="vision-scene-image-item">
+                                    <video class="carousel-video" muted loop playsinline data-scene="example_scene_4">
+                                        <source src="../images/homepage/videos/v4.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="vision-scene-image-item">
+                                    <video class="carousel-video" muted loop playsinline data-scene="example_scene_5">
+                                        <source src="../images/homepage/videos/v5.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="vision-scene-image-item">
+                                    <video class="carousel-video" muted loop playsinline data-scene="example_scene_6">
+                                        <source src="../images/homepage/videos/v6.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer vision-modal-footer">
+                        <button type="button" class="vision-btn vision-btn-cancel" data-role="cancel"
+                            id="demoViewCancel" data-i18n="buttons.cancel">取消</button>
+                        <button type="button" class="vision-btn vision-btn-confirm" data-role="confirm"
+                            id="demoViewConfirm" data-i18n="buttons.confirm">应用</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 场景模态框 -->
+        <div class="vision-modal-overlay" id="sceneModal"
+            onclick="if(event.target === this) this.classList.remove('vision-modal-show')">
+            <div class="vision-modal-dialog vision-scene-modal-dialog">
+                <div class="vision-modal-content vision-scene-modal-content">
+                    <div class="vision-modal-header vision-scene-modal-header">
+                        <h5 class="vision-modal-title vision-scene-modal-title" data-i18n="nav.scene">场景</h5>
+                    </div>
+                    <div class="vision-modal-body vision-scene-modal-body">
+                        <!-- 新建场景区域 -->
+                        <div class="vision-scene-section">
+                            <h6 class="vision-scene-section-title" data-i18n="nav.newScene">新建场景</h6>
+                            <div class="vision-scene-buttons">
+                                <button type="button" class="vision-scene-btn tracking-button" id="newBlankSceneBtn"
+                                    data-event-category="click" data-event-label="newBlankScene">
+                                    <i class="icon iconfont icon-AddCircleOutlined"></i>
+                                    <span data-i18n="nav.newBlankScene">新建空白场景</span>
+                                </button>
+                                <button type="button" class="vision-scene-btn" id="uploadLocalSceneBtn">
+                                    <i class="icon iconfont icon-shangchuan"></i>
+                                    <span data-i18n="nav.uploadLocalScene">上传本地场景</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- 选择示例场景区域 -->
+                        <div class="vision-scene-section">
+                            <h6 class="vision-scene-section-title" data-i18n="nav.selectExampleScene">选择示例场景</h6>
+                            <div class="vision-scene-image-grid">
+                                <div class="vision-scene-image-item">
+                                    <video class="carousel-video" muted loop playsinline data-scene="example_scene_1">
+                                        <source src="../images/homepage/videos/v1.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="vision-scene-image-item">
+                                    <video class="carousel-video" muted loop playsinline data-scene="example_scene_2">
+                                        <source src="../images/homepage/videos/v2.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="vision-scene-image-item">
+                                    <video class="carousel-video" muted loop playsinline data-scene="example_scene_3">
+                                        <source src="../images/homepage/videos/v3.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="vision-scene-image-item">
+                                    <video class="carousel-video" muted loop playsinline data-scene="example_scene_4">
+                                        <source src="../images/homepage/videos/v4.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="vision-scene-image-item">
+                                    <video class="carousel-video" muted loop playsinline data-scene="example_scene_5">
+                                        <source src="../images/homepage/videos/v5.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="vision-scene-image-item">
+                                    <video class="carousel-video" muted loop playsinline data-scene="example_scene_6">
+                                        <source src="../images/homepage/videos/v6.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 模型删除确认模态框 -->
+        <div class="modal fade vision-modal-bootstrap" id="modelDeleteConfirmModal" tabindex="-1"
+            aria-labelledby="modelDeleteConfirmLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content vision-modal-content">
+                    <div class="modal-header vision-modal-header">
+                        <h5 class="modal-title vision-modal-title" id="modelDeleteConfirmLabel">删除模型</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="icon  iconfont icon-cuowu1 icon-close"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body vision-modal-body">
+                        <p class="vision-modal-message" id="modelDeleteConfirmMessage">确定要删除选中的模型吗？此操作不可撤销。</p>
+                    </div>
+                    <div class="modal-footer vision-modal-footer">
+                        <button type="button" class="vision-btn vision-btn-cancel" data-role="cancel"
+                            data-i18n="buttons.cancel">取消</button>
+                        <button type="button" class="vision-btn vision-btn-confirm" data-role="confirm"
+                            data-i18n="buttons.confirm">确认</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 信息提示模态框 -->
+        <div class="modal fade vision-modal-bootstrap" id="modelShowMessageModal" tabindex="-1"
+            aria-labelledby="modelShowMessageLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content vision-modal-content">
+                    <div class="modal-header vision-modal-header">
+                        <h5 class="modal-title vision-modal-title" id="modelShowMessageLabel" data-i18n="modal.title">标题
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="icon  iconfont icon-cuowu1 icon-close"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body vision-modal-body">
+                        <p class="vision-modal-message" id="modelShowMessageMessage">消息提醒</p>
+                    </div>
+                    <div class="modal-footer vision-modal-footer">
+                        <button type="button" class="vision-btn vision-btn-confirm" data-role="confirm"
+                            data-i18n="buttons.confirm">确认</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 关于信息提示模态框 -->
+        <div class="vision-modal-overlay about-info-modal" id="aboutMessageModal">
+            <div class="vision-modal-dialog vision-about-info-modal-dialog">
+                <div class="vision-modal-content vision-about-info-modal-content">
+                    <div class="modal-header vision-modal-header">
+                        <div class="modal-title about-info-title" id="modelShowAboutTitle"
+                            data-i18n="modal.about.mainTitle">Visionary
+                        </div>
+                        <button type="button" class="btn-close" id="aboutMessageCloseBtn">
+                            <i class="icon  iconfont icon-cuowu1 icon-close"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body vision-modal-body about-message-body">
+                        <div class="vision-modal-message">
+                            <div class="about-message-content">
+                                <p data-i18n="modal.about.version"></p>
+                            </div>
+                        </div>
+                        <div class="vision-modal-message">
+                            <div class="about-message-title" data-i18n="modal.about.title"></div>
+                        </div>
+                        <div class="vision-modal-message about-message-item">
+                            <div class="about-message-content">
+                                <p data-i18n="modal.about.message-2.content"></p>
+                            </div>
+                        </div>
+                        <div class="vision-modal-message about-message-item">
+                            <div class="about-message-title" data-i18n="modal.about.message-3.title"></div>
+                            <div class="about-message-content">
+                                <p data-i18n="modal.about.message-3.content.item-1"></p>
+                                <p data-i18n="modal.about.message-3.content.item-2"></p>
+                                <p data-i18n="modal.about.message-3.content.item-3"></p>
+                                <p data-i18n="modal.about.message-3.content.item-4"></p>
+                            </div>
+                        </div>
+                        <div class="vision-modal-message about-message-item">
+                            <div class="about-message-title" data-i18n="modal.about.message-4.title"></div>
+                            <div class="about-message-content">
+                                <p data-i18n="modal.about.message-4.content.item-1"></p>
+                                <p data-i18n="modal.about.message-4.content.item-2"></p>
+                            </div>
+                        </div>
+                        <div class="vision-modal-message about-message-item about-message-border-item">
+                            <div class="about-message-content">
+                                <p data-i18n="modal.about.message-5.content"></p>
+                            </div>
+                            <div class="about-message-detail">
+                                <p data-i18n="modal.about.message-5.detail.item-1">
+                                </p>
+                                <p data-i18n="modal.about.message-5.detail.item-2">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 信息提示 - 设备环境信息 页面打开即加载 -->
+        <div class="vision-modal-overlay about-info-modal" id="noticeMessageModal">
+            <div class="vision-modal-dialog vision-about-info-modal-dialog">
+                <div class="vision-modal-content vision-about-info-modal-content">
+                    <div class="modal-header vision-modal-header">
+                        <div class="modal-title about-info-title" id="modelShowNoticeTitle"
+                            data-i18n="modal.about.title">
+                    </div>
+                    </div>
+                    <div class="modal-body vision-modal-body about-message-body">
+                        <div class="vision-modal-message about-message-item about-message-item-1">
+                            <div class="about-message-content">
+                                <p data-i18n="modal.about.message-1.content" id="noticeMessageContent1"></p>
+                            </div>
+                        </div>
+                        <div class="vision-modal-message about-message-item">
+                            <div class="about-message-content">
+                                <p data-i18n="modal.about.message-2.content" id="noticeMessageContent2"></p>
+                            </div>
+                        </div>
+                        <div class="vision-modal-message about-message-item">
+                            <div class="about-message-title" data-i18n="modal.about.message-3.title"></div>
+                            <div class="about-message-content">
+                                <p data-i18n="modal.about.message-3.content.item-1" id="noticeMessageContent3Item1"></p>
+                                <p data-i18n="modal.about.message-3.content.item-2" id="noticeMessageContent3Item2"></p>
+                                <p data-i18n="modal.about.message-3.content.item-3" id="noticeMessageContent3Item3"></p>
+                                <p data-i18n="modal.about.message-3.content.item-4" id="noticeMessageContent3Item4"></p>
+                            </div>
+                        </div>
+                        <div class="vision-modal-message about-message-item">
+                            <div class="about-message-title" data-i18n="modal.about.message-4.title"></div>
+                            <div class="about-message-content">
+                                <p data-i18n="modal.about.message-4.content.item-1" id="noticeMessageContent4Item1"></p>
+                                <p data-i18n="modal.about.message-4.content.item-2" id="noticeMessageContent4Item2"></p>
+                            </div>
+                        </div>
+                        <div class="vision-modal-message about-message-item about-message-border-item">
+                            <div class="about-message-content">
+                                <p data-i18n="modal.about.message-5.content" id="noticeMessageContent5"></p>
+                            </div>
+                            <div class="about-message-detail">
+                                <p data-i18n="modal.about.message-5.detail.item-1"
+                                    id="noticeMessageContent5DetailItem1">
+                                </p>
+                                <p data-i18n="modal.about.message-5.detail.item-2"
+                                    id="noticeMessageContent5DetailItem2">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer vision-modal-footer">
+                        <div class="vision-checkbox-container">
+                            <!-- <input type="checkbox" id="noticeNotShowAgain" class="vision-checkbox-input">
+                            <label for="noticeNotShowAgain" class="vision-checkbox-label">以后不再提醒</label> -->
+                    </div>
+                        <button type="button" class="vision-btn vision-btn-confirm" id="noticeMessageConfirmBtn"
+                            data-role="confirm" data-i18n="modal.about.confirm"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 退出视窗模态框 -->
+        <div class="vision-modal-overlay" id="exitViewModal">
+            <div class="vision-modal-dialog vision-exit-view-modal-dialog">
+                <div class="vision-modal-content">
+                    <div class="vision-modal-header">
+                        <h5 class="vision-modal-title" data-i18n="message.exitMultiView.title">退出多视窗</h5>
+                    </div>
+                    <div class="vision-modal-body">
+                        <div class="vision-modal-message">
+                            <p data-i18n="message.exitMultiView.warning">切换为单视窗模式后,未被选中的视窗将被关闭,且无法恢复。</p>
+                            <p data-i18n="message.exitMultiView.confirm">请确认保留的视窗。</p>
+                        </div>
+                        <div class="vision-modal-options">
+                            <div class="vision-option-item" data-value="left">
+                                <div class="vision-option-radio">
+                                    <div class="vision-radio-circle"></div>
+                                </div>
+                                <span class="vision-option-label" data-i18n="option.left">左</span>
+                            </div>
+                            <div class="vision-option-item" data-value="right">
+                                <div class="vision-option-radio">
+                                    <div class="vision-radio-circle"></div>
+                                </div>
+                                <span class="vision-option-label" data-i18n="option.right">右</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vision-modal-footer">
+                        <button type="button" class="vision-btn vision-btn-cancel" id="visionCancelBtn"
+                            data-i18n="buttons.cancel">取消</button>
+                        <button type="button" class="vision-btn vision-btn-confirm" id="visionConfirmBtn"
+                            data-i18n="buttons.confirm">确认</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 加载信息模态框 -->
+        <div class="vision-modal-overlay vision-modal-show loading-info-modal" id="loadingInfoModal">
+            <div class="vision-modal-dialog vision-loading-info-modal-dialog">
+                <div class="vision-modal-content vision-loading-info-modal-content">
+                    <div class="vision-loading-info-body">
+                        <!-- <i class="icon icon-normal vision-loading-icon"></i> -->
+                        <p class="vision-loading-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M28.9529 3.25526C28.9381 5.06785 30.3954 6.54926 32.208 6.56408C38.5368 6.61584 44.619 9.02522 49.2664 13.3216C53.9138 17.6179 56.7926 23.4925 57.3404 29.7979C57.8882 36.1032 56.0656 42.3863 52.2288 47.4198C48.3919 52.4532 42.8164 55.8755 36.5913 57.0179C30.3663 58.1603 23.9389 56.941 18.5648 53.5979C13.1907 50.2549 9.25596 45.0284 7.52917 38.9394C5.80237 32.8505 6.4076 26.3364 9.22663 20.6698C10.034 19.0469 9.37289 17.0768 7.75001 16.2694C6.12712 15.462 4.15701 16.1231 3.34964 17.746C-0.196877 24.875 -0.958305 33.0701 1.21411 40.7304C3.38653 48.3907 8.33673 54.966 15.0977 59.1717C21.8587 63.3775 29.9447 64.9115 37.7762 63.4743C45.6077 62.037 52.6221 57.7316 57.4491 51.3992C62.2761 45.0668 64.569 37.1623 63.8798 29.2297C63.1907 21.2972 59.569 13.9065 53.7222 8.50144C47.8755 3.09638 40.2237 0.0652285 32.2617 0.000112089C30.4491 -0.0147116 28.9677 1.44267 28.9529 3.25526Z"
+                                    fill="white" fill-opacity="0.75" />
+                            </svg>
+                        </p>
+                        <p class="vision-loading-text" id="loadingInfoText"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 保存场景模态框 -->
+        <div class="vision-modal-overlay" id="saveSceneSettingsModal">
+            <div class="vision-modal-dialog vision-savescene-modal-dialog">
+                <div class="vision-modal-content">
+                    <div class="vision-modal-header">
+                        <h5 class="vision-modal-title" data-i18n="modal.saveScene.title">选择保存场景路径</h5>
+                    </div>
+                    <div class="vision-modal-body">
+                        <div class="vision-savescene-settings-content">
+                            <div class="vision-savescene-settings-item">
+                                <label class="vision-savescene-settings-label"
+                                    data-i18n="modal.saveScene.folder">文件夹</label>
+                                <div class="vision-savescene-folder-wrapper">
+                                    <input type="text" class="vision-savescene-folder-input" id="saveSceneFolderInput"
+                                        placeholder="请选择保存的文件夹"
+                                        data-i18n-placeholder="modal.saveScene.folderPlaceholder">
+                                    <button type="button" class="vision-savescene-folder-button"
+                                        id="saveSceneFolderButton">
+                                        <i class="icon iconfont icon-FolderOutlined"></i>
+                                    </button>
+                                    <!-- <div class="vision-savescene-folder-icon">
+                                        <i class="icon iconfont icon-folder"></i>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="vision-savescene-settings-item">
+                                <label class="vision-savescene-settings-label"
+                                    data-i18n="modal.saveScene.sceneName">场景名称</label>
+                                <div class="vision-savescene-folder-wrapper">
+                                    <input type="text" class="vision-savescene-folder-input" id="saveSceneNameInput"
+                                        placeholder="请输入场景名称"
+                                        data-i18n-placeholder="modal.saveScene.sceneNamePlaceholder">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vision-modal-footer">
+                        <button type="button" class="vision-btn vision-btn-cancel" id="saveSceneSettingsCancel"
+                            data-i18n="buttons.cancel">取消</button>
+                        <button type="button" class="vision-btn vision-btn-confirm tracking-button"
+                            data-event-category="click" data-event-label="saveScene" id="saveSceneSettingsConfirm"
+                            data-i18n="buttons.confirm">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="./libs/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./scripts/demoview.js"></script>
+    <script src="./scripts/tracking.js"></script>
+    <!-- <script type="module" src="src/main_onlyUI.ts"></script> -->
+</body>
+
+</html>

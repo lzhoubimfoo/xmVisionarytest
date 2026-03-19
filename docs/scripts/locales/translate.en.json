@@ -1,0 +1,29 @@
+{
+    "titles":{
+        "mainTitle": "WebGPU-Native Runtime<br>for Next-Generation World Models",
+        "mainTitle2": "for Next-Generation World Models",
+        "subTitle1": "A browser-first rendering and inference stack that unifies WebGPU neural rendering with per-frame ONNX Runtime execution,",
+        "subTitle2": "enabling world-model experiences that are dynamic, extensible, and easy to deploy.",
+        "subTitle3": "it's free"
+    },
+    "buttons":{
+        "teach": "Tutorial"
+    },
+    "pages":{
+        "page1":{
+            "title": "Heterogeneous Assets",
+            "subTitle": "ONNX-Driven Per-Frame Inference",
+            "detail": "Built on WebGPU + ONNX Runtime, Visionary provides a unified runtime for Gaussian Splatting families (3DGS, MLP-based 3DGS, 4DGS, neural avatars) and traditional meshes—running directly in the browser. A standardized Gaussian Generator contract (ONNX I/O + metadata) makes algorithms plug-and-play: models can generate or update Gaussians every frame, and the pipeline can be extended with feed-forward post-processing networks."
+        },
+        "page2":{
+            "title": "High Performance",
+            "subTitle": "WebGPU-First Architecture",
+            "detail": "Designed around native WebGPU compute + graphics, the engine supports million-scale Gaussian rendering with GPU-side workloads such as parallel primitive sorting. It also provides a hybrid rendering pipeline with depth compositing between Gaussian point clouds and standard meshes to handle occlusion correctly in complex scenes. Universal asset loading across common formats: PLY / SPLAT / KSplat / SPZ / SOG, GLB/GLTF/FBX/OBJ, and ONNX-based dynamic assets (e.g., 4DGS / avatars / scaffold-style representations)."
+        },
+        "page3":{
+            "title": "Plugin-Ready ",
+            "subTitle": "Seamless Three.js Integration",
+            "detail": "Visionary ships as a three.js plug-in with a concise TypeScript API, making it straightforward to embed into existing web apps. No heavy native dependencies—share a link, run in-browser, iterate fast, and extend with your own ONNX models."
+        }
+    }
+}

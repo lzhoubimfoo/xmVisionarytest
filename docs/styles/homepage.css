@@ -1,0 +1,961 @@
+/* Base Settings */
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    font-size: 16px;
+    min-height: 40rem;
+    /* 640px */
+    min-width: 80rem;
+    /* 1280px */
+    /* 隐藏滚动条 */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* 隐藏 WebKit 浏览器的滚动条 */
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #020202;
+    font-feature-settings: 'liga' off, 'clig' off;
+    /* font-family: AILAB; */
+    font-family: 'PingFang SC', Inter, sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, SF Pro SC, SF Pro Display, SF Pro Icons, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-width: 1280px;
+    min-height: 640px;
+    position: relative;
+    /* 隐藏滚动条 */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* 隐藏 WebKit 浏览器的滚动条 */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.homepage-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #020202;
+    background-image: url('/images/homepage/background.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 80rem auto;
+    /* 1440px * 800px */
+    z-index: -1;
+    pointer-events: none;
+}
+
+.homepage-container {
+    width: 100%;
+    /* height由内容决定，不设置固定高度 */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    /* 确保容器能够包含所有main */
+    min-height: 100vh;
+}
+
+/* Header Styles */
+.homepage-header {
+    width: 100%;
+    height: 4rem;
+    /* 64px */
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: fixed;
+}
+
+.homepage-header-content {
+    width: 100%;
+    /* 1440px */
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.homepage-logo {
+    flex-shrink: 0;
+    display: flex;
+    /* align-items: center; */
+    align-items: baseline;
+    justify-items: center;
+    justify-content: center;
+    gap: 0.23rem;
+}
+.homepage-logo[lang="en"] {
+    align-items: baseline;
+}
+.homepage-logo[lang="zh"] {
+    align-items: center;
+}
+
+.logo-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+    display: block;
+}
+
+.logo-text {
+    /* font-size: 1.5rem; */
+    /* font-weight: 600; */
+    color: #ffffff;
+    width: 6.82288rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+}
+.logo-text-zh {
+    width: 3.875rem;
+    height: 1.75rem;
+    line-height: 1.75rem;
+}
+.logo-text-en {
+    width: 6.82288rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+}
+.homepage-nav {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-feature-settings: 'liga' off, 'clig' off;
+
+    /* 正文/常规text-1-regular */
+    font-family: 'PingFang SC',Inter, sans-serif;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.3125rem;
+    /* 150% */
+}
+
+.nav-link:hover {
+    opacity: 0.8;
+}
+
+.nav-github {
+    color: #ffffff;
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+    transition: opacity 0.3s;
+}
+
+.nav-github:hover {
+    opacity: 0.8;
+}
+
+.btn-lang-switch {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.75);
+    border: none;
+    padding: 0.125rem 0.25rem;
+    transition: all 0.2s ease;
+    font-size: 0.875rem;
+}
+
+.btn-get-start {
+    font-size: 0.875rem;
+    font-weight: 400;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: 'PingFang SC', Inter, sans-serif;
+    line-height: 1.5rem;
+    padding: 0.25rem 1rem;
+    border: 1px solid #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    border-radius: 3.125rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-get-start:hover {
+    /* border: 1px solid #46FFE9; */
+    background: linear-gradient(0deg, rgba(121, 107, 255, 0.20) 0%, rgba(215, 255, 250, 0.06) 50%, rgba(70, 255, 233, 0.20) 100%);
+    backdrop-filter: blur(10px);
+}
+
+/* Main Content Styles */
+.homepage-main {
+    flex: 0 0 auto; /* 不使用flex: 1，改为固定高度 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 480px;
+    /* 高度由JavaScript动态设置，确保精确等于视口高度 */
+    box-sizing: border-box;
+    overflow: hidden; /* 防止内容溢出 */
+    position: relative;
+    top: 0;
+    /* 使用 padding-top 替代 margin-top，确保内容区域向下移动，避免被 fixed header 遮挡 */
+    padding: 4rem 0 0 0;
+    margin: 0;
+    /* border: 1px solid blue; */
+}
+
+/* 第一个 main 最小高度为 610px */
+.homepage-main#main-1 {
+    min-height: 610px;
+}
+
+/* 翻页动画：上下浮动显隐效果 */
+@keyframes pageFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pageFadeOutDown {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+/* 应用淡入动画 */
+.homepage-main.page-fade-in {
+    /* animation: pageFadeInUp 0.4s ease forwards; */
+    animation: pageFadeInUp 0.4s ease forwards;
+}
+
+/* 应用淡出动画 */
+.homepage-main.page-fade-out {
+    /* animation: pageFadeOutDown 0.4s ease forwards; */
+    animation: pageFadeOutDown 0.4s ease forwards;
+}
+
+
+
+.main-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* padding: 0 2rem; */
+    box-sizing: border-box;
+    max-height: 100%;
+    overflow: auto;
+    transform: translateY(-2rem);
+    /* 缩放变换的原点设置为中心，确保缩放时内容居中 */
+    transform-origin: center center;
+    transition: transform 0.3s ease;
+}
+
+/* 第一个main的content在垂直居中基础上上移4rem */
+.homepage-main#main-1 .main-content {
+    transform: translateY(-4rem);
+}
+
+.main-content-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.main-title {
+    color: #FFF;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Alimama FangYuanTi VF";
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 3.5rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.0625rem;
+}
+
+.main-features {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    /* margin-bottom: 3rem; */
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.homepage-container[lang="en"] .main-features {
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+.homepage-container[lang="zh"] .main-features {
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+.homepage-container[lang="en"] .main-features p {
+    line-height: 1.25rem;
+}
+.homepage-container[lang="zh"] .main-features p {
+    line-height: 1.3125rem;
+}
+.main-features p {
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: 'PingFang SC',Inter,sans-serif;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 300;
+    margin: 0;
+    /* opacity: 0.5; */
+    line-height: 1.25rem;
+    /* 150% */
+}
+
+.btn-get-start-large {
+    width: 11.25rem;
+    height: 3rem;
+    padding: 0.75rem 0.5rem;
+
+    border-radius: 3.125rem;
+    border: none;
+    background: linear-gradient(0deg, rgba(121, 107, 255, 0.1) 0%, rgba(215, 255, 250, 0.03) 50%, rgba(70, 255, 233, 0.1) 100%);
+
+    color: #FFF;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: AILAB;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 70;
+    /* line-height: 1.5rem; */
+
+    cursor: pointer;
+    /* transition: all 0.3s; */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+
+    .arrow-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-bottom: 0.25rem;
+        /* padding: 0.25rem 0.125rem; */
+        flex-shrink: 0;
+        transition: all 0.3s;
+        /* border: 1px solid transparent; */
+    }
+}
+
+.btn-get-start-large::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: 3.125rem;
+    padding: 2px;
+    background: linear-gradient(135deg, rgba(70, 255, 233, 0.8) 0%, rgba(215, 255, 250, 0.8) 50%, rgba(121, 107, 255, 0.8) 100%);
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.btn-get-start-large:hover {
+    background: linear-gradient(0deg, rgba(121, 107, 255, 0.20) 0%, rgba(215, 255, 250, 0.06) 50%, rgba(70, 255, 233, 0.20) 100%);
+    .arrow-icon {
+        transform: translateX(0.5rem);
+    }
+}
+
+.main-content-free {
+    color: rgba(255, 255, 255, 0.40);
+    text-align: center;
+
+    /* 桌面端最小/常规text-3-regular */
+    font-family: 'PingFang SC',Inter,sans-serif;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.125rem;
+    margin-top: 0.25rem;
+    /* 150% */
+}
+
+.next-arrow-btn {
+    /* margin-top: 6rem; */
+    margin-top: 2rem;
+    width: 1.5rem;
+    height: 2rem;
+    padding: 0.5rem 0.25rem;
+
+    border-radius: 3.125rem;
+    border: none;
+    background: linear-gradient(0deg, rgba(121, 107, 255, 0.1) 0%, rgba(215, 255, 250, 0.03) 50%, rgba(70, 255, 233, 0.1) 100%);
+
+    color: #FFF;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: AILAB;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 70;
+    line-height: 2rem;
+
+    cursor: pointer;
+    /* transition: all 0.3s; */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+
+    .arrow-icon {
+        width: 1.5rem;
+        height: 2rem;
+        /* margin-bottom: 0.25rem; */
+        /* padding: 0.25rem 0.125rem; */
+        flex-shrink: 0;
+        /* border: 1px solid transparent; */
+    }
+}
+
+.next-arrow-btn::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: 3.125rem;
+    padding: 2px;
+    background: linear-gradient(135deg, rgba(70, 255, 233, 0.8) 0%, rgba(215, 255, 250, 0.8) 50%, rgba(121, 107, 255, 0.8) 100%);
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.next-arrow-btn:hover {
+    background: linear-gradient(0deg, rgba(121, 107, 255, 0.20) 0%, rgba(215, 255, 250, 0.06) 50%, rgba(70, 255, 233, 0.20) 100%);
+}
+
+#main-1 {
+    position: relative;
+}
+#main-1 .main-content-next-arrow {
+    position: absolute;
+    bottom: 3rem;
+}
+
+/* 在低高度时，确保 main-1 的内容不被 header 遮挡 */
+@media (min-height: 980px) and (max-height: 1019px) {
+    #main-1 .main-content-next-arrow {
+        bottom: 1.5rem;
+    }
+}
+/* 在低高度时，确保 main-1 的内容不被 header 遮挡 */
+@media (min-height: 960px) and (max-height: 979px) {
+    #main-1 .main-content-next-arrow {
+        bottom: 1.5rem;
+    }
+}
+/* 在低高度时，确保 main-1 的内容不被 header 遮挡 */
+@media (min-height: 900px) and (max-height: 959px) {
+    #main-1 .main-content-next-arrow {
+        bottom: 1rem;
+    }
+}
+/* 在低高度时，确保 main-1 的内容不被 header 遮挡 */
+@media (min-height: 880px) and (max-height: 899px) {
+    #main-1 .main-content-next-arrow {
+        bottom: 0.5rem;
+    }
+}
+/* 当页面高度在680-699px之间时，main-1最小高度为660px，translateY为-3rem */
+@media (min-height: 790px) and (max-height: 879px) {
+    #main-1 .main-content-next-arrow {
+        bottom: 0rem;
+    }
+}
+/* 当页面高度在680-699px之间时，main-1最小高度为660px，translateY为-3rem */
+@media (min-height: 760px) and (max-height: 789px) {
+    .homepage-main#main-1 .main-content {
+        transform: translateY(-2rem);
+    }
+    #main-1 .main-content-next-arrow {
+        bottom: 0rem;
+    }
+}
+/* 当页面高度在680-699px之间时，main-1最小高度为660px，translateY为-3rem */
+@media (min-height: 750px) and (max-height: 759px) {
+    .homepage-main#main-1 {
+        min-height: 730px;
+    }
+    .homepage-main#main-1 .main-content {
+        transform: translateY(-4rem);
+    }
+    #main-1 .main-content-next-arrow {
+        bottom: 0rem;
+    }
+}
+/* 当页面高度在680-699px之间时，main-1最小高度为660px，translateY为-3rem */
+@media (min-height: 730px) and (max-height: 749px) {
+    .homepage-main#main-1 {
+        min-height: 705px;
+    }
+    .homepage-main#main-1 .main-content {
+        transform: translateY(-3.5rem);
+    }
+    #main-1 .main-content-next-arrow {
+        bottom: 0rem;
+    }
+}
+
+/* 当页面高度在680-699px之间时，main-1最小高度为660px，translateY为-3rem */
+@media (min-height: 700px) and (max-height: 729px) {
+    .homepage-main#main-1 {
+        min-height: 690px;
+    }
+    .homepage-main#main-1 .main-content {
+        transform: translateY(-3.5rem);
+    }
+    #main-1 .main-content-next-arrow {
+        bottom: 0rem;
+    }
+}
+/* 当页面高度在680-699px之间时，main-1最小高度为660px，translateY为-3rem */
+@media (min-height: 680px) and (max-height: 699px) {
+    .homepage-main#main-1 {
+        min-height: 665px;
+    }
+    .homepage-main#main-1 .main-content {
+        transform: translateY(-3rem);
+    }
+    #main-1 .main-content-next-arrow {
+        bottom: 0rem;
+    }
+}
+
+/* 当页面高度在650-679px之间时，main-1最小高度为650px，translateY为-4rem */
+@media (min-height: 650px) and (max-height: 679px) {
+    .homepage-main#main-1 {
+        min-height: 650px;
+    }
+    .homepage-main#main-1 .main-content {
+        transform: translateY(-4rem);
+    }
+    #main-1 .main-content-next-arrow {
+        bottom: 0rem;
+    }
+}
+
+/* 当页面高度在609-650px之间时，main-1最小高度为630px，translateY为-4rem */
+@media (min-height: 610px) and (max-height: 649px) {
+    .homepage-main#main-1 {
+        min-height: 615px;
+    }
+    .homepage-main#main-1 .main-content {
+        transform: translateY(-4rem);
+    }
+    #main-1 .main-content-next-arrow {
+        bottom: 0rem;
+    }
+}
+
+/* 当页面高度低于610px时，使用-4rem */
+@media (max-height: 609px) {
+    .homepage-main#main-1 .main-content {
+        transform: translateY(-4rem);
+    }
+    #main-1 .main-content-next-arrow {
+        bottom: 0rem;
+    }
+}
+/* 高度完全由JavaScript控制，移除CSS中的固定高度设置 */
+/* 保留最小高度设置，确保内容不会太小 */
+@media (min-height: 481px) {
+    .homepage-main:not(#main-1) {
+        min-height: 100vh;
+    }
+}
+
+@media (min-height: 561px) {
+    .homepage-main#main-1 {
+        min-height: 100vh;
+    }
+}
+.main-detail-container {
+    display: flex;
+    width: 75rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content-detail-navbar {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 0.5rem;
+}
+
+.main-content-detail-navbar-item {
+    width: 0.5rem;
+    height: 0.5rem;
+    align-self: stretch;
+    aspect-ratio: 1/1;
+    border-radius: 0.25rem;
+    border: 1px solid var(--75-text-dark-4, rgba(255, 255, 255, 0.75));
+}
+.main-content-detail-navbar-item:hover {
+    cursor: pointer;
+}
+
+.main-content-detail-navbar-item.active {
+    height: 2rem;
+    align-self: stretch;
+    border-radius: 0.25rem;
+    border: 1px solid var(--75-text-dark-4, rgba(255, 255, 255, 0.75));
+    background: var(--40-text-dark-3, rgba(255, 255, 255, 0.40));
+    cursor: default !important;
+}
+
+.main-content-detail-info {
+    flex-shrink: 1;
+    margin-left: 4.5rem;
+    margin-right: 7.5rem;
+    text-align: left;
+    width: 22.5rem;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* 内容信息淡入动画 */
+@keyframes detailInfoFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 应用内容信息淡入动画 */
+.main-content-detail-info.content-fade-in {
+    animation: detailInfoFadeIn 0.5s ease forwards;
+}
+
+.main-content-detail-info-number {
+    font-feature-settings: 'liga' off, 'clig' off;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+    font-family: "Alimama FangYuanTi VF";
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.10) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+    /* 100% */
+}
+
+.main-content-detail-info-title {
+    margin-top: 0.5rem;
+    color: #FFF;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Alimama FangYuanTi VF";
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 2.25rem;
+    margin-bottom: 0.5rem;
+    /* 150% */
+    .main-content-detail-info-sub-title {
+        font-size: 1.25rem;
+    }
+}
+
+.main-content-detail-info-content {
+    margin-top: 0.5rem;
+    color: #8C8C8C;
+    font-feature-settings: 'liga' off, 'clig' off;
+
+    /* 三级组件标题/常规title-3-regular */
+    font-family: 'PingFang SC', Inter, sans-serif;
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+    /* 150% */
+}
+.homepage-container[lang="en"] .main-content-detail-info-content {
+    font-size: 0.8125rem;
+}
+.homepage-container[lang="zh"] .main-content-detail-info-content {
+    font-size: 1rem;
+}
+
+.main-content-detail-img {
+    flex-shrink: 1;
+    width: 40rem;
+    height: 30rem;
+    padding: 1.5rem;
+    opacity: 1;
+    transform: translateX(0);
+    /* border: 1px solid red; */
+}
+
+/* 内容图片淡入动画 */
+@keyframes detailImgFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* 应用内容图片淡入动画（延迟0.3s） */
+.main-content-detail-img.content-fade-in {
+    animation: detailImgFadeIn 0.5s ease 0.3s forwards;
+}
+
+.main-content-detail-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.arrow-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* Carousel Styles */
+.homepage-carousel {
+    width: 75rem;
+    height: 14.625rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.homepage-container[lang="en"] .homepage-carousel {
+    margin-top: 2rem;
+}
+.homepage-container[lang="zh"] .homepage-carousel {
+    margin-top: 3.75rem;
+}
+
+.homepage-carousel-container {
+    width: 100%;
+    padding: 0 2.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+#homepageCarouselWrapper {
+    width: calc(100% - 5rem);
+    margin: auto;
+    overflow: hidden;
+}
+
+.homepage-carousel .swiper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    /* overflow: hidden; */
+    /* Swiper 会自动处理内部布局，不需要 flex */
+
+}
+
+.homepage-carousel .swiper-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* 让 Swiper 正常控制 wrapper 的移动和间距 */
+    /* 间距由 Swiper 的 spaceBetween 参数控制，不使用 CSS gap */
+}
+
+.homepage-carousel {
+    --carousel-active-width: 26rem;
+    --carousel-active-height: 14.625rem;
+    --carousel-inactive-scale: 0.65384615;
+    /* 17 / 26 */
+    --carousel-offset: 4.5rem;
+    /* (26 - 17) / 2 */
+}
+
+.homepage-carousel .swiper-slide {
+    position: relative;
+    flex-shrink: 0;
+    width: var(--carousel-active-width) !important;
+    height: var(--carousel-active-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.6s ease;
+}
+
+.homepage-carousel .swiper-slide-active,
+.homepage-carousel .swiper-slide.active,
+.homepage-carousel .swiper-slide-duplicate-active,
+.homepage-carousel .swiper-slide-duplicate-active.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.homepage-carousel .carousel-slide-inner {
+    position: relative;
+    width: var(--carousel-active-width);
+    height: var(--carousel-active-height);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.35);
+    transition: transform 0.6s ease, border-color 0.6s ease, box-shadow 0.6s ease;
+    transform: translateX(0) scale(var(--carousel-inactive-scale));
+    transform-origin: center;
+}
+
+.homepage-carousel .swiper-slide:not(.swiper-slide-active):not(.swiper-slide-prev):not(.swiper-slide-next) .carousel-slide-inner {
+    transform: translateX(0) scale(var(--carousel-inactive-scale));
+}
+
+.homepage-carousel .swiper-slide-prev .carousel-slide-inner,
+.homepage-carousel .swiper-slide-duplicate-prev .carousel-slide-inner {
+    transform: translateX(var(--carousel-offset)) scale(var(--carousel-inactive-scale));
+}
+
+.homepage-carousel .swiper-slide-next .carousel-slide-inner,
+.homepage-carousel .swiper-slide-duplicate-next .carousel-slide-inner {
+    transform: translateX(calc(var(--carousel-offset) * -1)) scale(var(--carousel-inactive-scale));
+}
+
+.homepage-carousel .swiper-slide-active .carousel-slide-inner,
+.homepage-carousel .swiper-slide.active .carousel-slide-inner,
+.homepage-carousel .swiper-slide-duplicate-active .carousel-slide-inner,
+.homepage-carousel .swiper-slide-duplicate-active.active .carousel-slide-inner {
+    transform: translateX(0) scale(1);
+    border-color: #D7FFFA;
+}
+
+.homepage-carousel .carousel-slide-inner video,
+.homepage-carousel .carousel-slide-inner img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+}
+
+/* Swiper carousel control buttons */
+.homepage-carousel .carousel-control-prev,
+.homepage-carousel .carousel-control-next {
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: transparent;
+    opacity: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    z-index: 10;
+    outline: none;
+    color: rgba(255, 255, 255, 0.40);
+    cursor: pointer;
+}
+
+.homepage-carousel .carousel-control-prev:hover,
+.homepage-carousel .carousel-control-next:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+    opacity: 1;
+}
+
+.homepage-carousel .carousel-control-prev:active,
+.homepage-carousel .carousel-control-next:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.homepage-carousel .carousel-control-prev {
+    left: 0;
+}
+
+.homepage-carousel .carousel-control-next {
+    right: 0;
+}
+
+/* Hide Swiper default navigation buttons if using custom ones */
+.homepage-carousel .swiper-button-next,
+.homepage-carousel .swiper-button-prev {
+    display: none;
+}
+
+/* Hide Swiper pagination if needed */
+.homepage-carousel .swiper-pagination {
+    display: none;
+}

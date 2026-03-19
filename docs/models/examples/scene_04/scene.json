@@ -1,0 +1,355 @@
+{
+  "version": 1,
+  "meta": {
+    "app": "VisionaryEditor",
+    "savedAt": "2025-12-09T01:00:59.279Z"
+  },
+  "camera": {
+    "position": {
+      "x": -10.522299705946038,
+      "y": 2.25181192956778,
+      "z": 2.6822967578824874
+    },
+    "rotation": {
+      "x": -0.698371805654505,
+      "y": -1.2494938421506518,
+      "z": -0.6726318553358043
+    },
+    "scale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "fov": 60,
+    "near": 0.1,
+    "far": 1000
+  },
+  "totalFrames": 200,
+  "scenes": [
+    {
+      "view": "left",
+      "models": [
+        {
+          "id": "97c22c48-679b-46de-92f9-7f1f56c8f8ea",
+          "name": "trex.onnx",
+          "typeTag": "url",
+          "trs": [
+            [
+              1.2842733542193525,
+              -1.3203388510829053,
+              -2.704203348625556
+            ],
+            [
+              1.6824816224730004,
+              -0.06892121844700932,
+              1.812426995659462
+            ],
+            [
+              2.4608139396132147,
+              2.4608139396132116,
+              2.4608139396132143
+            ]
+          ],
+          "type": "visionary",
+          "assetName": "/examples-api/models/examples/scene_04/trex.onnx",
+          "gaussianParams": {
+            "id": "model_0",
+            "name": "trex (1).onnx",
+            "visible": true,
+            "gaussianScale": 1,
+            "maxShDeg": 3,
+            "kernelSize": 0.1,
+            "opacityScale": 1,
+            "cutoffScale": 1,
+            "timeScale": 1,
+            "timeOffset": 0,
+            "timeUpdateMode": "fixed_delta",
+            "animationSpeed": 1,
+            "isAnimationRunning": true,
+            "isAnimationPaused": false
+          }
+        },
+        {
+          "id": "0a25c745-c040-43a7-aa57-e33712c93619",
+          "name": "gaussians3d_truck.onnx",
+          "typeTag": "url",
+          "trs": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              -0.08497953214472553,
+              0.01818724536606179,
+              -0.002238841538338468
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "type": "visionary",
+          "assetName": "/examples-api/models/examples/scene_04/gaussians3d_truck.onnx",
+          "gaussianParams": {
+            "id": "model_1",
+            "name": "gaussians3d_truck.onnx",
+            "visible": true,
+            "gaussianScale": 1,
+            "maxShDeg": 3,
+            "kernelSize": 0.1,
+            "opacityScale": 1,
+            "cutoffScale": 1,
+            "timeScale": 1,
+            "timeOffset": 0,
+            "timeUpdateMode": "fixed_delta",
+            "animationSpeed": 1,
+            "isAnimationRunning": true,
+            "isAnimationPaused": false
+          }
+        },
+        {
+          "id": "68cde800-051d-435e-a152-424e36bd448b",
+          "name": "trex_JK0G.onnx",
+          "typeTag": "url",
+          "trs": [
+            [
+              2.0230691496252806,
+              -0.24819626123861052,
+              -0.8215171935361523
+            ],
+            [
+              1.6380537387937135,
+              -0.10712093575123184,
+              0.23667743536229136
+            ],
+            [
+              1.2000000000000002,
+              1.2000000000000002,
+              1.2000000000000002
+            ]
+          ],
+          "type": "visionary",
+          "assetName": "/examples-api/models/examples/scene_04/trex.onnx",
+          "gaussianParams": {
+            "id": "model_2",
+            "name": "trex (1).onnx",
+            "visible": true,
+            "gaussianScale": 1,
+            "maxShDeg": 3,
+            "kernelSize": 0.1,
+            "opacityScale": 1,
+            "cutoffScale": 1,
+            "timeScale": 1,
+            "timeOffset": 0,
+            "timeUpdateMode": "fixed_delta",
+            "animationSpeed": 1,
+            "isAnimationRunning": true,
+            "isAnimationPaused": false
+          }
+        },
+        {
+          "id": "ce2ae442-69c9-484b-ac55-debfb5a3bf2e",
+          "name": "录制相机_1",
+          "typeTag": "recordingCamera",
+          "trs": [
+            [
+              -6.451385158656018,
+              1.0005466206638909,
+              6.336818038742859
+            ],
+            [
+              -0.49846127146577035,
+              -1.0478262001346552,
+              -0.4882388308032195
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "type": "recordingCamera",
+          "params": {
+            "camera": {
+              "fov": 60,
+              "near": 0.1,
+              "far": 1000,
+              "aspect": 1.7777777777777777
+            },
+            "viewport": {
+              "width": 400,
+              "height": 224
+            },
+            "preview": {
+              "visible": true
+            },
+            "gizmo": {
+              "length": 5
+            }
+          },
+          "cameraParams": {
+            "fov": 60,
+            "near": 0.1,
+            "far": 1000,
+            "aspect": 1.7777777777777777
+          }
+        },
+        {
+          "id": "c8e05441-7933-4259-aa71-578db515000e",
+          "name": "trex_aXjW.onnx",
+          "typeTag": "url",
+          "trs": [
+            [
+              -2.4047062660404848,
+              -1.814066049033435,
+              5.423622425919691
+            ],
+            [
+              1.4024550812388679,
+              0.16423466567402598,
+              -3.1075944338204717
+            ],
+            [
+              1.5000000000000004,
+              1.5000000000000004,
+              1.5000000000000004
+            ]
+          ],
+          "type": "visionary",
+          "assetName": "/examples-api/models/examples/scene_04/trex.onnx",
+          "gaussianParams": {
+            "id": "model_3",
+            "name": "trex (1).onnx",
+            "visible": true,
+            "gaussianScale": 1,
+            "maxShDeg": 3,
+            "kernelSize": 0.1,
+            "opacityScale": 1,
+            "cutoffScale": 1,
+            "timeScale": 1,
+            "timeOffset": 0,
+            "timeUpdateMode": "fixed_delta",
+            "animationSpeed": 1,
+            "isAnimationRunning": true,
+            "isAnimationPaused": false
+          }
+        }
+      ],
+      "keyframes": [
+        {
+          "objectId": "97c22c48-679b-46de-92f9-7f1f56c8f8ea",
+          "frame": 199,
+          "trs": [
+            [
+              1.2842733542193525,
+              -1.3203388510829053,
+              -2.704203348625556
+            ],
+            [
+              1.6824816224730004,
+              -0.06892121844700932,
+              1.812426995659462
+            ],
+            [
+              2.4608139396132147,
+              2.4608139396132116,
+              2.4608139396132143
+            ]
+          ]
+        },
+        {
+          "objectId": "0a25c745-c040-43a7-aa57-e33712c93619",
+          "frame": 199,
+          "trs": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              -0.08497953214472553,
+              0.01818724536606179,
+              -0.002238841538338468
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "objectId": "68cde800-051d-435e-a152-424e36bd448b",
+          "frame": 199,
+          "trs": [
+            [
+              2.0230691496252806,
+              -0.24819626123861052,
+              -0.8215171935361523
+            ],
+            [
+              1.6380537387937135,
+              -0.10712093575123184,
+              0.23667743536229136
+            ],
+            [
+              1.2000000000000002,
+              1.2000000000000002,
+              1.2000000000000002
+            ]
+          ]
+        },
+        {
+          "objectId": "ce2ae442-69c9-484b-ac55-debfb5a3bf2e",
+          "frame": 199,
+          "trs": [
+            [
+              -6.451385158656018,
+              1.0005466206638909,
+              6.336818038742859
+            ],
+            [
+              -0.49846127146577035,
+              -1.0478262001346552,
+              -0.4882388308032195
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "cameraParams": {
+            "fov": 60,
+            "near": 0.1,
+            "far": 1000,
+            "aspect": 1.7777777777777777
+          }
+        },
+        {
+          "objectId": "c8e05441-7933-4259-aa71-578db515000e",
+          "frame": 199,
+          "trs": [
+            [
+              -2.4047062660404848,
+              -1.814066049033435,
+              5.423622425919691
+            ],
+            [
+              1.4024550812388679,
+              0.16423466567402598,
+              -3.1075944338204717
+            ],
+            [
+              1.5000000000000004,
+              1.5000000000000004,
+              1.5000000000000004
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}
