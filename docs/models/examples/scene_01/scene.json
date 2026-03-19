@@ -51,7 +51,7 @@
             ]
           ],
           "type": "visionary",
-          "assetName": "/examples-api/models/examples/scene_01/hook.onnx",
+          "assetName": "./examples-api/models/examples/scene_01/hook.onnx",
           "gaussianParams": {
             "id": "model_0",
             "name": "hook.onnx",
@@ -91,7 +91,7 @@
             ]
           ],
           "type": "visionary",
-          "assetName": "/examples-api/models/examples/scene_01/yueqiu.ply",
+          "assetName": "./examples-api/models/examples/scene_01/yueqiu.ply",
           "gaussianParams": {
             "id": "model_1",
             "name": "yueqiu.ply",
