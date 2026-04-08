@@ -653,7 +653,7 @@ body::-webkit-scrollbar {
     align-self: stretch;
     aspect-ratio: 1/1;
     border-radius: 0.25rem;
-    border: 1px solid var(--75-text-dark-4, rgba(255, 255, 255, 0.75));
+    border: 1px solid rgba(255, 255, 255, 0.75);
 }
 .main-content-detail-navbar-item:hover {
     cursor: pointer;
@@ -663,8 +663,8 @@ body::-webkit-scrollbar {
     height: 2rem;
     align-self: stretch;
     border-radius: 0.25rem;
-    border: 1px solid var(--75-text-dark-4, rgba(255, 255, 255, 0.75));
-    background: var(--40-text-dark-3, rgba(255, 255, 255, 0.40));
+    border: 1px solid  rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.40);
     cursor: default !important;
 }
 
